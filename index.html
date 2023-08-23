@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tusimbule</title>
+  <script>
+    // Define a global callback function that will be triggered when the Google Maps Places script is loaded
+    function initMap() {
+      // Render your React components here
+      import('/src/main.jsx')
+        .then(module => {
+          // When the module is imported, you can render your React components
+        })
+        .catch(error => {
+          console.error('Error loading main module:', error);
+        });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPN5K7poQadUq9PIZrOqiKzJpeL3jYjQ=places&v=weekly&callback=initMap" async></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
